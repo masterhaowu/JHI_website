@@ -1,0 +1,50 @@
+<?php 
+
+	
+	if (!isset($second_nav)) {
+		$second_nav = 'grabber_classes';
+	}
+	
+	
+	$query = "SELECT * FROM ".$second_nav;
+	//print_r($query);
+	$result = mysqli_query($dbc, $query);
+	
+	
+
+?>
+
+<nav id="secondary_nav" class="navbar navbar-default" role="navigation">
+
+	<div id="container_centered">
+	
+	<ul class="nav navbar-nav">
+		<?php
+			while($nav_class = mysqli_fetch_assoc($result)) {
+			?>
+			<li>
+				<!--<h6 href="#"><i class="fa fa-microchip fa-5x" aria-hidden="true"></i></h6>-->
+				<a href="#">
+				
+				<img src="images/card.png" href="#"/>
+				</br>
+				</br>
+				
+					<!--
+					</br></br><?php echo $nav_class['name'];?>
+				
+					</br><?php echo $nav_class['family1'];?> series
+				-->
+				<?php echo $nav_class['name'];?> </br>series
+				</a>
+					
+			</li>
+			<?php
+			}
+		?>
+		
+
+	</ul>
+	</div>
+
+</nav>

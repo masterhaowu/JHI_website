@@ -19,6 +19,26 @@
 
 <style>
 	
+	body {
+		font-family:'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		color: #000;   
+		margin-top: 40px;
+		line-height:16px;
+		background-color: #ffffff;
+
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family:'Open Sans', sans-serif;
+		font-weight: 500;
+		line-height:40px;
+	   
+	}
+
+	
+	
 	.navbar-brand {
 	  padding: 0px; 
 	}
@@ -26,6 +46,67 @@
 	  height: 100%;
 	  padding: 2px; 
 	  width: auto;
+	}
+	
+	#secondary_nav {
+		/*
+		margin-top:-50px;
+		padding-top:20px;
+		*/
+		background-color: #E8E8E8;
+  		background-image: none;
+  		background-repeat: no-repeat;
+  		
+  	
+ 	}
+ 	#container_centered img{
+		height: 50px; 
+		width: auto;
+	}
+ 	
+ 	#container_centered ul {
+ 
+ 		vertical-align: top;
+ 		display: inline-block;
+		float: none;
+		
+	}
+	
+	#container_centered li {
+		display: inline-block;
+    	float: none;
+    	width:120px;
+    	margin-left:5px;
+    	margin-right:5px;
+    	padding-top:20px;
+    	
+	}
+	
+	#container_centered li:hover {
+		/*background-color: #66CCFF;
+		 * 
+		 
+		color: #0046DF;
+		*/
+	}
+	
+	
+	#container_centered a {
+		font-weight: 100;
+		font-size: 12px;
+		color: #101010;
+		line-height: 12px;
+	}
+	
+	
+	#container_centered a:hover {
+		color: #0046DF;
+	}
+	
+	#container_centered {
+		white-space: nowrap;
+    	overflow-x: auto;
+		text-align: center;
 	}
 
 

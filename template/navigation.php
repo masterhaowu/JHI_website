@@ -6,10 +6,10 @@
 	<?php } ?>
 	<div class="container">
 		<div class="navbar-header">
-			<div class="navbar-brand" href="#">
-        		<img alt="Brand" src="images/logo_simple_light.png">
+			<div class="navbar-brand">
+        		<img alt="Brand" src="images/logo_simple_light.png"> 
      		</div>
-     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse">
+     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_navbar_toggle">
      			<span class="icon-bar"></span>
      			<span class="icon-bar"></span>
      			<span class="icon-bar"></span>
@@ -17,18 +17,18 @@
      		 
 		</div>
 		
-		<div class="navbar-collapse collapse">
+		<div class="navbar-collapse collapse" id="main_navbar_toggle">
 			<ul class="nav navbar-nav navbar-right">
 				
 				<?php 
 					//nav_main($dbc, $page_id);
 				?>
 				<li<?php //if (strcmp($page_active, "home") == 0) {echo ' class="active"';} ?>>
-					<a href="#">Home</a>
+					<a href="index.php">Home</a>
 					
 				</li>
 				<li>
-					<a href="#">Frame Grabbers</a>
+					<a href="grabbers.php">Frame Grabbers</a>
 				</li>
 				<li>
 					<a href="#">Cameras</a>
