@@ -18,8 +18,11 @@
 
 
 <style>
+
+	
 	
 	body {
+		position: relative; 
 		font-family:'Open Sans', sans-serif;
 		font-weight: 400;
 		font-size: 14px;
@@ -32,7 +35,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		font-family:'Open Sans', sans-serif;
-		font-weight: 500;
+		font-weight: 100;
 		line-height:40px;
 	   
 	}
@@ -59,6 +62,9 @@
   		
   	
  	}
+ 	
+ 	
+ 	
  	#container_centered img{
 		height: 50px; 
 		width: auto;
@@ -75,7 +81,7 @@
 	#container_centered li {
 		display: inline-block;
     	float: none;
-    	width:120px;
+    	width:100px;
     	margin-left:5px;
     	margin-right:5px;
     	padding-top:20px;
@@ -93,7 +99,7 @@
 	
 	#container_centered a {
 		font-weight: 100;
-		font-size: 12px;
+		font-size: 11px;
 		color: #101010;
 		line-height: 12px;
 	}
@@ -108,6 +114,77 @@
     	overflow-x: auto;
 		text-align: center;
 	}
+	
+	#class_nav {
+ 		margin-top:50px;
+ 		background-color: #FFFFFF;
+  		background-image: none;
+  		background-repeat: no-repeat;
+ 	}
+ 	
+ 	
+	.navbar-default .navbar-nav > .active{
+		
+		background: #2886FF;
+	}
+ 	
+ 	
+ 	
+ 	
+ 	#container_centered_class {
+		white-space: nowrap;
+    	overflow-x: auto;
+		text-align: center;
+	}
+ 	
+ 	#container_centered_class ul {
+ 
+ 		vertical-align: top;
+ 		display: inline-block;
+		float: none;
+		
+	}
+	
+	#container_centered_class li {
+		display: inline-block;
+    	float: none;
+    	width:140px;
+    	margin-left:5px;
+    	margin-right:5px;
+    	
+    	
+	}
+	
+	#tab_centered {
+		
+		text-align: center;
+	}
+	
+	#tab_centered ul {
+ 
+ 		vertical-align: top;
+ 		display: inline-block;
+		float: none;
+		
+	}
+	
+	#tab_centered li {
+		display: inline-block;
+    	float: none;
+    	width:200px;
+    	margin-left:5px;
+    	margin-right:5px;
+    	padding-top:20px;
+    	
+	}
+	
+	#tab_centered a {
+		font-size: 30px;
+		font-weight:100;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+ 	
 
 
 	#btn-debug {

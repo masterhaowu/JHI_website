@@ -24,9 +24,9 @@
 			?>
 			<li>
 				<!--<h6 href="#"><i class="fa fa-microchip fa-5x" aria-hidden="true"></i></h6>-->
-				<a href="#">
+				<a href="grabbers_class.php?class=<?php echo $nav_class['class']; ?>">
 				
-				<img src="images/card.png" href="#"/>
+				<img src="images/card.png"/>
 				</br>
 				</br>
 				

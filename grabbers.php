@@ -6,6 +6,7 @@
 	<head>
 		<title>Frame Grabbers<?php echo ' | '.$site_title; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 
 		<?php
 		include ('config/css.php');
@@ -30,7 +31,22 @@
 		?>
 		<?php include(D_TEMPLATE.'/secondary_navigation.php'); ?>
 		
-		<br/>
-		<br/>
+	
+		
+		<div id="grabbers_main_banner">
+			<?php
+				//move this later
+				$query = "SELECT * FROM banners WHERE name = 'grabbers_main_banner'";
+				$result = mysqli_query($dbc, $query);
+				$grabbers_main_banner = mysqli_fetch_assoc($result);
+				echo $grabbers_main_banner['html'];
+			?>
+		</div>
+		
+		</br></br></br>
+		</br></br></br>
+		</br></br></br>
+		</br></br></br>
+		
 	</body>
 </html>
