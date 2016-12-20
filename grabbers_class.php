@@ -5,6 +5,7 @@
 <html>
 	<head>
 		
+		
 		<?php
 		$query = "SELECT * FROM grabber_classes WHERE class = '$_GET[class]'";
 		$result = mysqli_query($dbc, $query);
@@ -32,11 +33,13 @@
 		
 		<title>Frame Grabbers<?php echo ' | '.$site_title; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+		<!--<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 
 		<?php
 		include ('config/css.php');
 		include ('css/css_grabbers.php');
+		include ('css/css_table.php');
 		?>
 
 		<?php
@@ -77,17 +80,24 @@
 		<div style="margin:400px">aa</div>
 		
 		<div id="models">
-			<h1>Section 1</h1>
+			<div class = "container">
 			
+			<h3>Model Specs</h3>
+			<hr>
+			</div>
 			<?php include(D_TEMPLATE.'/model_tabs.php'); ?>
-			<h1><?php echo $size_models; ?></h1>
-			<p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+			
+			<?php include(D_TEMPLATE.'/comparsion_table.php'); ?>
+			<?php
+			print_r($size_products * 310);
+			?>
 		</div>
 		
 		
 		
-		
+		<script src="js/table.js"></script>
 		<script>
+		
 			//$('body').scrollspy({ target: '#class_nav' })
 			var offset = document.getElementsByTagName("body")[0].getAttribute("data-offset"); 
 			document.write(offset)
@@ -99,6 +109,8 @@
 			    scrollBy(0, -offset);
 			});	
 			
+			
+		
 			
 		</script>
 	</body>

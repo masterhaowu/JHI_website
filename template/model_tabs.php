@@ -7,10 +7,12 @@
 	$size_models = mysqli_num_rows($result_models);
 	
 	$default_model = 0;
+	
+	
 ?>
 
 <div class="container" id="tab_centered">
-<ul class="nav nav-pills">
+<ul id="model_tabs" class="nav nav-pills">
 	<?php
 
 	while ($model_data = mysqli_fetch_assoc($result_models)) {
