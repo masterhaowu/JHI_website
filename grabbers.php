@@ -11,6 +11,7 @@
 		<?php
 		include ('config/css.php');
 		include ('css/css_grabbers.php');
+		include ('css/css_table.php');
 		?>
 
 		<?php
@@ -34,6 +35,9 @@
 	
 		
 		<div id="grabbers_main_banner">
+			</br></br></br>
+			</br></br></br>
+			</br></br></br>
 			<?php
 				//move this later
 				$query = "SELECT * FROM banners WHERE name = 'grabbers_main_banner'";
@@ -44,9 +48,7 @@
 		</div>
 		
 		</br></br></br>
-		</br></br></br>
-		</br></br></br>
-		</br></br></br>
 		
+		<?php include(D_TEMPLATE.'/footer.php'); ?>
 	</body>
 </html>

@@ -344,8 +344,57 @@ jQuery(document).ready(function($){
        		height = Math.max( height, $(this).outerHeight());
     	});
     $('.max_resolution').outerHeight(height);
+    
+    height = 0;
+    $('.ram').each(function(){
+       		height = Math.max( height, $(this).outerHeight());
+    	});
+    $('.ram').outerHeight(height);
+    
+    height = 0;
+    $('.signal_detection').each(function(){
+       		height = Math.max( height, $(this).outerHeight());
+    	});
+    $('.signal_detection').outerHeight(height);
+    
+    height = 0;
+    $('.ad').each(function(){
+       		height = Math.max( height, $(this).outerHeight());
+    	});
+    $('.ad').outerHeight(height);
+    
+    height = 0;
+    $('.dimension').each(function(){
+       		height = Math.max( height, $(this).outerHeight());
+    	});
+    $('.dimension').outerHeight(height);
+    
+    height = 0;
+    $('.mirror').each(function(){
+       		height = Math.max( height, $(this).outerHeight());
+    	});
+    $('.mirror').outerHeight(height);
 	
-	
+	height = 0;
+	$('.name').each(function(){
+			//console.log("check");
+       		height = Math.max( height, $(this).outerHeight());
+    	});
+    $('.name').outerHeight(height);
+    
+    height = 0;
+	$('.ext_trg').each(function(){
+			//console.log("check");
+       		height = Math.max( height, $(this).outerHeight());
+    	});
+    $('.ext_trg').outerHeight(height);
+    
+    height = 0;
+	$('.note').each(function(){
+			//console.log("check");
+       		height = Math.max( height, $(this).outerHeight());
+    	});
+    $('.note').outerHeight(height);
 	
 	
 	

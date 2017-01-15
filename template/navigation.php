@@ -31,7 +31,7 @@
 					<a href="grabbers.php">Frame Grabbers</a>
 				</li>
 				<li>
-					<a href="#">Cameras</a>
+					<a href="cameras.php">Cameras</a>
 				</li>
 				
 				<li>

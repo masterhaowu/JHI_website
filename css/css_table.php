@@ -197,7 +197,7 @@ img {
 .cd-products-columns .product {
   position: relative;
   float: left;
-  width: 150px;
+  width: 310px;
   text-align: center;
   -webkit-transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
   -moz-transition: opacity 0.3s, visibility 0.3s, -moz-transform 0.3s;
@@ -284,8 +284,8 @@ img {
 
 .cd-products-table .top-info {
   position: relative;
-  height: 177px;
-  width: 150px;
+  height: 280px;
+  width: 310px;
   text-align: center;
   padding: 1.25em 2.5em;
   border-color: #e6e6e6;
@@ -375,6 +375,7 @@ img {
   .cd-products-table .top-info h3 {
     padding-top: 1.4em;
     font-size: 1.6rem;
+    
   }
   .cd-products-table .top-info .check {
     margin-bottom: 1.5em;

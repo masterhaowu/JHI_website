@@ -14,7 +14,7 @@
 
 ?>
 
-<nav id="secondary_nav" class="navbar navbar-default" role="navigation">
+<nav id="secondary_nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 
 	<div id="container_centered">
 	
@@ -24,9 +24,22 @@
 			?>
 			<li>
 				<!--<h6 href="#"><i class="fa fa-microchip fa-5x" aria-hidden="true"></i></h6>-->
-				<a href="grabbers_class.php?class=<?php echo $nav_class['class']; ?>">
+				<?php
+					if ($second_nav == 'grabber_classes') {
+				?>
+					<a href="grabbers_class.php?class=<?php echo $nav_class['class']; ?>">
+				<?php
+					}
+				?>
+				<?php
+					if  ($second_nav == 'camera_classes') {
+				?>
+					<a href="cameras_class.php?class=<?php echo $nav_class['class']; ?>">
+				<?php
+					}
+				?>
 				
-				<img src="images/card.png"/>
+				<img src="images/<?php echo $nav_class['icon']; ?>"/>
 				</br>
 				</br>
 				
@@ -35,7 +48,15 @@
 				
 					</br><?php echo $nav_class['family1'];?> series
 				-->
-				<?php echo $nav_class['name'];?> </br>series
+				<?php echo $nav_class['name'];?> </br>
+				<?php
+					if ($second_nav == 'grabber_classes') {
+						echo "series";
+					} 
+					if ($second_nav == 'camera_classes') {
+						echo "cameras";
+					}
+				?>
 				</a>
 					
 			</li>
@@ -48,3 +69,7 @@
 	</div>
 
 </nav>
+<ul class="cd-table-navigation">
+		<li><a href="#0" class="prev inactive">Prev</a></li>
+		<li><a href="#0" class="next">Next</a></li>
+</ul>

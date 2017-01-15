@@ -5,6 +5,7 @@
 <html>
 	<head>
 		<title><?php echo $page['title'].' | '.$site_title; ?></title>
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<?php
@@ -36,11 +37,24 @@
 			?>
 		</div>
 		
+		<div id="grabbers_index_banner">
+			</br></br></br>
+			</br></br></br>
+			</br></br></br>
+			<?php
+				//move this later
+				$query = "SELECT * FROM banners WHERE name = 'grabbers_index_banner'";
+				$result = mysqli_query($dbc, $query);
+				$grabbers_main_banner = mysqli_fetch_assoc($result);
+				echo $grabbers_main_banner['html'];
+			?>
+		</div>
+		
 		
 		<div class="container">
 			<h1><?php echo $page['header']; ?></h1>
 			<?php echo $page['body_formatted']; ?>
-			<img src="images/eye.jpg">
+			
 		</div>
 		
 		

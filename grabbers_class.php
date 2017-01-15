@@ -17,7 +17,7 @@
 		$query_features = "SELECT * FROM banners WHERE class = '$_GET[class]' AND type = 'feature' ORDER BY banner_order ASC";
 		$result_features = mysqli_query($dbc, $query_features);
 		
-		$query_overview = "SELECT * FROM banners WHERE class = '_GET[class]' AND type = 'overview'";
+		$query_overview = "SELECT * FROM banners WHERE class = '$_GET[class]' AND type = 'overview'";
 		$result_overview = mysqli_query($dbc, $query_overview);
 		
 	
@@ -39,6 +39,7 @@
 		<?php
 		include ('config/css.php');
 		include ('css/css_grabbers.php');
+		include ('css/css_grabbers_class.php');
 		include ('css/css_table.php');
 		?>
 
@@ -59,25 +60,40 @@
 		<div id="overview">
 			</br></br></br>
 			</br>
-			<h1>Section 1</h1>
-			<p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+			<div class = "container">
+				<h3>Series Overview</h3>
+				
+				<hr>
+			</div>
+			<div id = "<?php echo $overview_data['name']; ?>">
+				<?php 
+					echo $overview_data['html'];
+				?>
+			</div>
 		</div>
 		
-		<div style="margin:400px">aa</div>
+		
 		
 		<div id="features">
-			
+			<div class = "container">
+				<h3>Features</h3>
+				<hr>
+			</div>
 			<?php
 			while ($features_data = mysqli_fetch_assoc($result_features)) {
+				?>
+				<div id = "<?php echo $features_data['name']; ?>">
+				<?php
 				echo $features_data['html'];
+				?>
+				</div>
+				<?php
 			}
 			?>
 			
-			<h1>Section 1</h1>
-			<p>Try to scroll this page and look at the navigation bar while scrolling!</p>
-		</div>
+			
 		
-		<div style="margin:400px">aa</div>
+		
 		
 		<div id="models">
 			<div class = "container">
@@ -86,21 +102,19 @@
 			<hr>
 			</div>
 			<?php include(D_TEMPLATE.'/model_tabs.php'); ?>
-			
+			</br>
 			<?php include(D_TEMPLATE.'/comparsion_table.php'); ?>
-			<?php
-			print_r($size_products * 310);
-			?>
+			
 		</div>
 		
-		
+		<?php include(D_TEMPLATE.'/footer.php'); ?>
 		
 		<script src="js/table.js"></script>
 		<script>
 		
 			//$('body').scrollspy({ target: '#class_nav' })
 			var offset = document.getElementsByTagName("body")[0].getAttribute("data-offset"); 
-			document.write(offset)
+			//document.write(offset)
 			//var offset = 120;
 			
 			$('#class_nav li a').click(function(event) {
