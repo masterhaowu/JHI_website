@@ -32,8 +32,8 @@
 		?>
 		<?php include(D_TEMPLATE.'/secondary_navigation.php'); ?>
 		
-	
 		
+		<!--
 		<div id="grabbers_main_banner">
 			</br></br></br>
 			</br></br></br>
@@ -46,8 +46,15 @@
 				echo $grabbers_main_banner['html'];
 			?>
 		</div>
+		-->
+		</br></br></br>
 		
 		</br></br></br>
+		</br></br></br>
+		</br></br></br>
+		<div class="container">
+		<h1>Website is updating, please check back after March 1st, 2017</h1>
+		</div>
 		
 		<?php include(D_TEMPLATE.'/footer.php'); ?>
 	</body>

@@ -7,7 +7,9 @@
 	<div class="container">
 		<div class="navbar-header">
 			<div class="navbar-brand">
+				<a href="index.php">
         		<img alt="Brand" src="images/logo_simple_light.png"> 
+        		</a>
      		</div>
      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_navbar_toggle">
      			<span class="icon-bar"></span>
@@ -23,10 +25,7 @@
 				<?php 
 					//nav_main($dbc, $page_id);
 				?>
-				<li<?php //if (strcmp($page_active, "home") == 0) {echo ' class="active"';} ?>>
-					<a href="index.php">Home</a>
-					
-				</li>
+				
 				<li>
 					<a href="grabbers.php">Frame Grabbers</a>
 				</li>
@@ -39,8 +38,11 @@
 				</li>
 				
 				<li>
-					<a href="#">Other Products</a>
+					<a href="index.php">Vision Systems</a>
+					
 				</li>
+				
+				
 				<li>
 					<a href="#">Support</a>
 				</li>

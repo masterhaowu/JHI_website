@@ -40,7 +40,7 @@
 		<div id="grabbers_index_banner">
 			</br></br></br>
 			</br></br></br>
-			</br></br></br>
+			
 			<?php
 				//move this later
 				$query = "SELECT * FROM banners WHERE name = 'grabbers_index_banner'";
@@ -51,11 +51,59 @@
 		</div>
 		
 		
-		<div class="container">
-			<h1><?php echo $page['header']; ?></h1>
-			<?php echo $page['body_formatted']; ?>
+		<div id="cameras_index_banner">
+			</br></br></br>
+			</br></br></br>
 			
+			<?php
+				//move this later
+				$query = "SELECT * FROM banners WHERE name = 'cameras_index_banner'";
+				$result = mysqli_query($dbc, $query);
+				$cameras_main_banner = mysqli_fetch_assoc($result);
+				echo $cameras_main_banner['html'];
+			?>
 		</div>
+		
+		<div id="index_tools">
+			<?php
+				//move this later
+				$query = "SELECT * FROM banners WHERE name = 'index_tools'";
+				$result = mysqli_query($dbc, $query);
+				$index_tools = mysqli_fetch_assoc($result);
+				echo $index_tools['html'];
+			?>
+		</div>
+		
+		<div id="medical_index_banner">
+			<?php
+				//move this later
+				$query = "SELECT * FROM banners WHERE name = 'medical_index_banner'";
+				$result = mysqli_query($dbc, $query);
+				$medical_index_banner = mysqli_fetch_assoc($result);
+				echo $medical_index_banner['html'];
+			?>
+		</div>
+		
+		<div id="vision_index_banner">
+			<?php
+				//move this later
+				$query = "SELECT * FROM banners WHERE name = 'vision_index_banner'";
+				$result = mysqli_query($dbc, $query);
+				$vision_index_banner = mysqli_fetch_assoc($result);
+				echo $vision_index_banner['html'];
+			?>
+		</div>
+		
+		<div id="index_career">
+			<?php
+				//move this later
+				$query = "SELECT * FROM banners WHERE name = 'index_career'";
+				$result = mysqli_query($dbc, $query);
+				$index_career = mysqli_fetch_assoc($result);
+				echo $index_career['html'];
+			?>
+		</div>
+		
 		
 		
 		
