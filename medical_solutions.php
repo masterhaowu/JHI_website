@@ -1,5 +1,5 @@
 <?php
-//cameras
+//medical_solutions
 ?>
 
 <?php
@@ -8,13 +8,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Cameras<?php echo ' | '.$site_title; ?></title>
+		<title>Medical Solutions<?php echo ' | '.$site_title; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 
 		<?php
 		include ('config/css.php');
-		include ('css/css_cameras.php');
+		//include ('css/css_cameras.php');
 		?>
 
 		<?php
@@ -47,6 +47,5 @@
 		</div>
 		
 		<?php include(D_TEMPLATE.'/footer.php'); ?>
-		<script src="js/secondary_nav.js"></script>
 	</body>
 </html>

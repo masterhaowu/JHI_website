@@ -14,7 +14,7 @@ include('functions/template.php');
 
 $debug = data_setting_value($dbc, 'debug-status');
 
-$site_title = 'JHI Beijing';
+$site_title = 'JHI - Beijing JoinHope Image Technology Ltd';
 
 $page_id = 'home';
 if (isset($_GET['page'])) {

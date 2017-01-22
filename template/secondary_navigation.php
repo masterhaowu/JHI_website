@@ -18,7 +18,7 @@
 
 	<div id="container_centered">
 	
-	<ul class="nav navbar-nav">
+	<ul id="secondary_nav_ul" class="nav navbar-nav">
 		<?php
 			while($nav_class = mysqli_fetch_assoc($result)) {
 			?>
@@ -67,9 +67,16 @@
 
 	</ul>
 	</div>
+	
 
 </nav>
+<ul class="secondary_nav_indicator">
+		<li><a href="#0" class="next">Next</a></li>
+		<li><a href="#0" class="prev inactive">Prev</a></li>
+</ul>
+<!--
 <ul class="cd-table-navigation">
 		<li><a href="#0" class="prev inactive">Prev</a></li>
 		<li><a href="#0" class="next">Next</a></li>
 </ul>
+-->

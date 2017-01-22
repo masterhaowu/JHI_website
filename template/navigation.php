@@ -34,17 +34,17 @@
 				</li>
 				
 				<li>
-					<a href="#">Medical Solutions</a>
+					<a href="medical_solutions.php">Medical Solutions</a>
 				</li>
 				
 				<li>
-					<a href="index.php">Vision Systems</a>
+					<a href="vision_systems.php">Vision Systems</a>
 					
 				</li>
 				
 				
 				<li>
-					<a href="#">Support</a>
+					<a href="support_main.php">Support</a>
 				</li>
 			</ul>
 	</div><!--navbar collapse-->

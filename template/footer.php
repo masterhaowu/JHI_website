@@ -5,7 +5,7 @@
 
 <div id="footer">
 	<div class="container">
-		<img src="./images/logo_simple.png" style="padding-left:-20px; margin-left:-20px; margin-bottom:0px; margin-top:-10px" href="#">
+		<img src="./images/logo.png" style="padding-left:-20px; margin-left:-20px; margin-bottom:0px; margin-top:-10px" href="#">
 		<hr style="border-top: 1px solid #ddd">
 		<div class="row ">
 			<div class="col-lg-3 col-md-3 col-sm-6">
@@ -52,6 +52,7 @@
 		</div> <!--row-->
 		</br>
 		<hr style="border-top: 1px solid #ddd">
+		<a>Beijing JoinHope Image Technology Ltd</a></br>
 		<a>&copy; 2009 北京嘉恒中自图像技术有限公司 京ICP备05060249号</a></br>
 		<a>海淀公安局网络备案编号：1101084841</a></br>
 		<a>Copyright &copy; 2009 JoinHope Image</a></br>

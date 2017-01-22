@@ -11,7 +11,7 @@
 		<?php
 		include ('config/css.php');
 		include ('css/css_grabbers.php');
-		include ('css/css_table.php');
+		//include ('css/css_table.php');
 		?>
 
 		<?php
@@ -57,5 +57,6 @@
 		</div>
 		
 		<?php include(D_TEMPLATE.'/footer.php'); ?>
+		<script src="js/secondary_nav.js"></script>
 	</body>
 </html>
