@@ -1,5 +1,5 @@
 <?php
-//css_grabbers
+//css_grabbers_class
 
 	$query = "SELECT * FROM banners WHERE page = 'grabbers_class'";
 	$result = mysqli_query($dbc, $query);

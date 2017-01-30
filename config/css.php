@@ -178,9 +178,9 @@
 	
 	
 	.secondary_nav_indicator a.inactive {
-		background: rgba(255, 64, 66, 0.2) url("./images/cd-arrow.svg") no-repeat center center;
+		
 		opacity: 0;
-  v		visibility: hidden;
+  		visibility: hidden;
 	}
 	
 	
