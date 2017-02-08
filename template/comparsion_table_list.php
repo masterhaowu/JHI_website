@@ -1,14 +1,43 @@
 <?php
-	$query_products = "SELECT * FROM cameras WHERE class = '$_GET[class]' ORDER BY serial ASC";
+
+	if(!isset($comparsion_table_type)){
+		$comparsion_table_type = "cameras";
+	}
+	
+	$is_search = false;
+	if(isset($search_type)){
+		$is_search = true;
+		$comparsion_table_type = $search_type;
+	}
+
+	if($is_search == false){
+		$query_products = "SELECT * FROM $comparsion_table_type WHERE class = '$_GET[class]' ORDER BY serial ASC";
+	}
+	else {
+		$query_products = "SELECT * FROM $search_type WHERE $_GET[tag] = 1 ORDER BY serial ASC";
+	}
+	//echo $query_products;
 	$result_products = mysqli_query($dbc, $query_products);
 	
 	$size_products = mysqli_num_rows($result_products);
-	
+	//echo $size_products;
 	$is_even = 0;
 ?>
 <?php
-	$specs =preg_split("/[\s,]+/", $class_data['model_table']);
-	$specs_num = count($specs);
+	$specs_num = 0;
+	if($is_search == true){
+		$query_search = "SELECT * FROM search_table WHERE type = '$search_type'";
+		//$query_search = "SELECT * FROM search_table WHERE type = 'cameras'";
+		$result_search = mysqli_query($dbc, $query_search);
+		$search_data = mysqli_fetch_assoc($result_search);
+		$specs =preg_split("/[\s,]+/", $search_data['model_table']);
+		$specs_num = count($specs);
+	}
+	else{
+		$specs =preg_split("/[\s,]+/", $class_data['model_table']);
+		$specs_num = count($specs);
+	}
+	
 ?>
 
 	
@@ -18,8 +47,9 @@
 			for ($x = 0; $x < $specs_num; $x++) {
 				$query_spec = "SELECT * FROM table_lookup WHERE product_table = '$specs[$x]'";
 				$result_spec = mysqli_query($dbc, $query_spec);
-					
+				//echo $query_spec;
 				$model_spec = mysqli_fetch_assoc($result_spec);
+				//echo $model_spec['display_name'];
 				?>
 	   			<th><?php echo $model_spec['display_name']; ?></th>
 				<?php
@@ -62,14 +92,18 @@
 							<?php
 								$tags =preg_split("/[\s,]+/", $model_spec['tags']);
 								$tags_num = count($tags);
+								//echo $tags_num;
 								for ($y = 0; $y < $tags_num; $y++) {
 									if ($product[$tags[$y]] == 1) {
 										$query_tag = "SELECT * FROM tags WHERE tag = '$tags[$y]'";
+										//echo $query_tag;
 										$result_tag = mysqli_query($dbc, $query_tag);
 										
 										$current_tag = mysqli_fetch_assoc($result_tag);
 										?>
-										<a class="<?php echo $current_tag['color']; ?>"><?php echo $current_tag['display_name']; ?></a>
+										<a class="<?php echo $current_tag['color']; ?>"
+											href="search.php?type=<?php echo $comparsion_table_type; ?>&tag=<?php echo $tags[$y];?>">
+											<?php echo $current_tag['display_name']; ?></a>
 										<?php
 									}
 								}
@@ -91,7 +125,9 @@
 										
 										$current_tag = mysqli_fetch_assoc($result_tag);
 										?>
-										<a class="<?php echo $current_tag['color']; ?>"><?php echo $current_tag['display_name']; ?></a>
+										<a class="<?php echo $current_tag['color']; ?>"
+											href="search.php?type=<?php echo $comparsion_table_type; ?>&tag=<?php echo $tags[$y];?>">
+											<?php echo $current_tag['display_name']; ?></a>
 										<?php
 									}
 								}

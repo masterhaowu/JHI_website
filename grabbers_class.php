@@ -14,10 +14,10 @@
 		?>
 		
 		<?php
-		$query_features = "SELECT * FROM banners WHERE class = '$_GET[class]' AND type = 'feature' ORDER BY banner_order ASC";
+		$query_features = "SELECT * FROM banners WHERE page = 'grabbers_class' AND class = '$_GET[class]' AND type = 'feature' ORDER BY banner_order ASC";
 		$result_features = mysqli_query($dbc, $query_features);
 		
-		$query_overview = "SELECT * FROM banners WHERE class = '$_GET[class]' AND type = 'overview'";
+		$query_overview = "SELECT * FROM banners WHERE page = 'grabbers_class' AND class = '$_GET[class]' AND type = 'overview'";
 		$result_overview = mysqli_query($dbc, $query_overview);
 		
 	
@@ -38,9 +38,10 @@
 
 		<?php
 		include ('config/css.php');
-		include ('css/css_grabbers.php');
+		//include ('css/css_grabbers.php');
 		include ('css/css_grabbers_class.php');
-		include ('css/css_table.php');
+		//include ('css/css_table.php');
+		include ('css/css_table_list.php');
 		?>
 
 		<?php
@@ -101,9 +102,9 @@
 			<h3>Model Specs</h3>
 			<hr>
 			</div>
-			<?php include(D_TEMPLATE.'/model_tabs.php'); ?>
+			<?php $comparsion_table_type = "grabbers"; ?>
 			</br>
-			<?php include(D_TEMPLATE.'/comparsion_table.php'); ?>
+			<?php include(D_TEMPLATE.'/comparsion_table_list.php'); ?>
 			
 		</div>
 		

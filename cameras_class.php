@@ -14,10 +14,10 @@
 		?>
 		
 		<?php
-		$query_features = "SELECT * FROM banners WHERE class = '$_GET[class]' AND type = 'feature' ORDER BY banner_order ASC";
+		$query_features = "SELECT * FROM banners WHERE page = 'cameras_class' AND class = '$_GET[class]' AND type = 'feature' ORDER BY banner_order ASC";
 		$result_features = mysqli_query($dbc, $query_features);
 		
-		$query_overview = "SELECT * FROM banners WHERE class = '$_GET[class]' AND type = 'overview'";
+		$query_overview = "SELECT * FROM banners WHERE page = 'cameras_class' AND class = '$_GET[class]' AND type = 'overview'";
 		$result_overview = mysqli_query($dbc, $query_overview);
 		
 	
@@ -103,7 +103,7 @@
 			</div>
 			<?php //include(D_TEMPLATE.'/model_tabs.php'); ?>
 			</br>
-			<?php //include(D_TEMPLATE.'/comparsion_table.php'); ?>
+			<?php $comparsion_table_type = "cameras"; ?>
 			<?php include(D_TEMPLATE.'/comparsion_table_list.php'); ?>
 			
 		</div>

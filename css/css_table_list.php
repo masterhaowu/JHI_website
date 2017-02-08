@@ -238,9 +238,9 @@ table a.tag_pink {
 
 table a.tag_yellow {
 	font-size: 12px;
-	border: 2px solid #DADA0B;
+	border: 2px solid #FFCC00;
     padding: 3px 10px; 
-    background: #DADA0B;
+    background: #FFCC00;
 	color: #FFFFFF;
     border-radius: 20px;
 }
@@ -254,6 +254,75 @@ table a.tag_darkpurple {
     border-radius: 20px;
 }
 
+table a.tag_red {
+	font-size: 12px;
+	border: 2px solid #E60000;
+    padding: 3px 10px; 
+    background: #E60000;
+	color: #FFFFFF;
+    border-radius: 20px;
+}
+
+table a.tag_darkbluegreen {
+	font-size: 12px;
+	border: 2px solid #669999;
+    padding: 3px 10px; 
+    background: #669999;
+	color: #FFFFFF;
+    border-radius: 20px;
+}
+
+table a.tag_blackpurple {
+	font-size: 12px;
+	border: 2px solid #6666FF;
+    padding: 3px 10px; 
+    background: #6666FF;
+	color: #FFFFFF;
+    border-radius: 20px;
+}
+
+
+table a.tag_orangepink {
+	font-size: 12px;
+	border: 2px solid #FF9999;
+    padding: 3px 10px; 
+    background: #FF9999;
+	color: #FFFFFF;
+    border-radius: 20px;
+}
+
+table a.tag_normalgreen {
+	font-size: 12px;
+	border: 2px solid #33CC00;
+    padding: 3px 10px; 
+    background: #33CC00;
+	color: #FFFFFF;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h3 a.tag_lightblue {
+	font-size: 18px;
+	border: 2px solid #80CCFF;
+    padding: 3px 10px; 
+    background: #80CCFF;
+	color: #FFFFFF;
+    border-radius: 20px;
+}
 
 
 </style>
