@@ -49,9 +49,7 @@
 		-->
 		</br></br></br>
 		
-		</br></br></br>
-		</br></br></br>
-		
+		</br>
 		<?php
 			$query_banners = "SELECT * FROM banners WHERE page = 'grabbers' ORDER BY banner_order ASC";
 			$result_banners = mysqli_query($dbc, $query_banners);

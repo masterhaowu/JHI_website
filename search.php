@@ -37,11 +37,12 @@
 		</br></br>
 		
 		<div class="container">
-			<h3 style="margin-bottom:-20px">Filtering Products:</h3>
+			<h3 style="margin-bottom:-20px">Products Filter:</h3>
+			<hr>
 			<h3>showing all <?php echo $_GET['type'];?> with tag 
 				<a class="<?php echo $current_tag['color']; ?>"><?php echo $current_tag['display_name']; ?></a>
 			</h3>
-			<hr>
+			
 		</div>
 		<?php 
 			$search_type = $_GET['type']; 
