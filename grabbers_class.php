@@ -61,24 +61,30 @@
 		<div id="overview">
 			</br></br></br>
 			</br>
-			<div class = "container">
+			<div class = "row">
+			<div class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
 				<h3>Series Overview</h3>
 				
 				<hr>
+			</div>
 			</div>
 			<div id = "<?php echo $overview_data['name']; ?>">
 				<?php 
 					echo $overview_data['html'];
 				?>
 			</div>
+			
+			
 		</div>
 		
 		
 		
 		<div id="features">
-			<div class = "container">
+			<div class = "row">
+			<div class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
 				<h3>Features</h3>
 				<hr>
+			</div>
 			</div>
 			<?php
 			while ($features_data = mysqli_fetch_assoc($result_features)) {
@@ -88,6 +94,7 @@
 				echo $features_data['html'];
 				?>
 				</div>
+				
 				<?php
 			}
 			?>
@@ -97,15 +104,17 @@
 		
 		
 		<div id="models">
-			<div class = "container">
-			
+			<div class = "row">
+			<div class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+				
 			<h3>Model Specs</h3>
 			<hr>
-			</div>
+			
 			<?php $comparsion_table_type = "grabbers"; ?>
 			</br>
 			<?php include(D_TEMPLATE.'/comparsion_table_list.php'); ?>
-			
+			</div>
+			</div>
 		</div>
 		
 		<?php include(D_TEMPLATE.'/footer.php'); ?>
@@ -114,7 +123,7 @@
 		<script>
 		
 			//$('body').scrollspy({ target: '#class_nav' })
-			var offset = document.getElementsByTagName("body")[0].getAttribute("data-offset"); 
+			var offset = document.getElementsByTagName("body")[0].getAttribute("data-offset") - 0.01; 
 			//document.write(offset)
 			//var offset = 120;
 			

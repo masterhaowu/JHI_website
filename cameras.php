@@ -39,8 +39,9 @@
 		
 		</br></br></br>
 		
-		</br></br></br>
-		</br></br></br>
+		</br>
+		
+
 		
 		<?php
 			$query_banners = "SELECT * FROM banners WHERE page = 'cameras' ORDER BY banner_order ASC";

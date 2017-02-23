@@ -20,7 +20,7 @@
 	
 	<ul id="secondary_nav_ul" class="nav navbar-nav">
 		<?php
-			while($nav_class = mysqli_fetch_assoc($result)) {
+			while($nav_class = mysqli_fetch_assoc($result) AND $nav_class['id'] < 25) {
 			?>
 			<li>
 				<!--<h6 href="#"><i class="fa fa-microchip fa-5x" aria-hidden="true"></i></h6>-->

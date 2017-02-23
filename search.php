@@ -36,21 +36,23 @@
 		?>
 		</br></br>
 		
-		<div class="container">
+		<div class="row">
+		<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0"
 			<h3 style="margin-bottom:-20px">Products Filter:</h3>
 			<hr>
 			<h3>showing all <?php echo $_GET['type'];?> with tag 
 				<a class="<?php echo $current_tag['color']; ?>"><?php echo $current_tag['display_name']; ?></a>
 			</h3>
 			
-		</div>
+		
 		<?php 
 			$search_type = $_GET['type']; 
 			
 		?>
 		
 		<?php include(D_TEMPLATE.'/comparsion_table_list.php'); ?>
-		
+		</div>
+		</div>
 
 		<?php include(D_TEMPLATE.'/footer.php'); ?>
 		

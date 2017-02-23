@@ -25,11 +25,19 @@
 		?>
 		<?php include(D_TEMPLATE.'/navigation.php'); ?>
 		<br/>
-		<br/>
+		
+		
+		<div id="contact_home_banner">
+			<?php
+				$query = "SELECT * FROM banners WHERE name = 'contact_home_banner'";
+				$result = mysqli_query($dbc, $query);
+				$welcome_banner = mysqli_fetch_assoc($result);
+				echo $welcome_banner['html'];
+			?>
+		</div>
 		
 		<div id="welcome_banner">
 			<?php
-				//move this later
 				$query = "SELECT * FROM banners WHERE name = 'welcome_banner'";
 				$result = mysqli_query($dbc, $query);
 				$welcome_banner = mysqli_fetch_assoc($result);
@@ -39,7 +47,7 @@
 		
 		<div id="grabbers_index_banner">
 			</br></br></br>
-			</br></br></br>
+			</br></br>
 			
 			<?php
 				//move this later
@@ -50,10 +58,23 @@
 			?>
 		</div>
 		
+		<div id="endoscopes_index_banner">
+			</br></br></br>
+			</br></br>
+			
+			<?php
+				//move this later
+				$query = "SELECT * FROM banners WHERE name = 'endoscopes_index_banner'";
+				$result = mysqli_query($dbc, $query);
+				$endoscopes_main_banner = mysqli_fetch_assoc($result);
+				echo $endoscopes_main_banner['html'];
+			?>
+		</div>
+		
 		
 		<div id="cameras_index_banner">
 			</br></br></br>
-			</br></br></br>
+			</br></br>
 			
 			<?php
 				//move this later
@@ -63,6 +84,8 @@
 				echo $cameras_main_banner['html'];
 			?>
 		</div>
+		
+		
 		
 		<div id="index_tools">
 			<?php

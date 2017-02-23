@@ -28,7 +28,7 @@ table {
 	color:#666;
 	font-size:13px;
 	margin: auto;
-    width: calc(100% - 80px);
+    width: calc(100% - 0px);
 	background:#eaebec;
 	
 	margin-bottom:50px;

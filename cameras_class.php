@@ -60,24 +60,30 @@
 		<div id="overview">
 			</br></br></br>
 			</br>
-			<div class = "container">
+			<div class = "row">
+			<div class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
 				<h3><?php echo $overview_data['overview_title']; ?></h3>
 				
 				<hr>
+			</div>
 			</div>
 			<div id = "<?php echo $overview_data['name']; ?>">
 				<?php 
 					echo $overview_data['html'];
 				?>
 			</div>
+			
+			
 		</div>
 		
 		
 		
 		<div id="features">
-			<div class = "container">
+			<div class = "row">
+			<div class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
 				<h3>Features</h3>
 				<hr>
+			</div>
 			</div>
 			<?php
 			while ($features_data = mysqli_fetch_assoc($result_features)) {
@@ -96,15 +102,21 @@
 		
 		
 		<div id="models">
-			<div class = "container">
+			<div class = "row">
+			<div class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
 			
 			<h3>Model Specs</h3>
 			<hr>
-			</div>
+			
+			
+			
 			<?php //include(D_TEMPLATE.'/model_tabs.php'); ?>
 			</br>
 			<?php $comparsion_table_type = "cameras"; ?>
 			<?php include(D_TEMPLATE.'/comparsion_table_list.php'); ?>
+			
+			</div>
+			</div>
 			
 		</div>
 		
