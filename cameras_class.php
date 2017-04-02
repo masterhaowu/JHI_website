@@ -20,13 +20,15 @@
 		$query_overview = "SELECT * FROM banners WHERE page = 'cameras_class' AND class = '$_GET[class]' AND type = 'overview'";
 		$result_overview = mysqli_query($dbc, $query_overview);
 		
+		$query_buy = "SELECT * FROM banners WHERE name = 'class_buy'";
+		$result_buy = mysqli_query($dbc, $query_buy);
 	
 		//features_data contains more than 1 therefore should be put to the while loop later
 		//$features_data = mysqli_fetch_assoc($result_features);
 		
 		$overview_data = mysqli_fetch_assoc($result_overview);
 		
-		
+		$buy_data = mysqli_fetch_assoc($result_buy);
 		
 		
 		?>
@@ -82,7 +84,7 @@
 			<div class = "row">
 			<div class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
 				<h3>Features</h3>
-				<hr>
+				<hr style="padding-bottom: 0px; margin-bottom: 0px">
 			</div>
 			</div>
 			<?php
@@ -108,7 +110,11 @@
 			<h3>Model Specs</h3>
 			<hr>
 			
-			
+			<div id="class_buy">
+				<?php 
+					echo $buy_data['html'];
+				?>
+			</div>
 			
 			<?php //include(D_TEMPLATE.'/model_tabs.php'); ?>
 			</br>

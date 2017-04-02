@@ -8,7 +8,7 @@
 		<div class="navbar-header">
 			<div class="navbar-brand">
 				<a href="index.php">
-        		<img alt="Brand" src="images/logo_simple_light.png"> 
+        		<img alt="Brand" src="images/logo_fullsize.png"> 
         		</a>
      		</div>
      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_navbar_toggle">

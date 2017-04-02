@@ -1,8 +1,12 @@
 <?php
 //CSS
-
-
+	$query_buy = "SELECT * FROM banners WHERE name = 'class_buy'";
+	$result_buy = mysqli_query($dbc, $query_buy);
+	$data_buy = mysqli_fetch_assoc($result_buy);
 ?>
+
+
+<link rel="mask-icon" href="images/jhi-logo2.svg" color="DodgerBlue">
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -40,6 +44,8 @@
 	   
 	}
 
+
+	
 	
 	
 	.navbar-brand {
@@ -66,8 +72,10 @@
  	
  	
  	#container_centered img{
+ 		
 		height: 60px; 
 		width: auto;
+		
 	}
  	
  	#container_centered ul {
@@ -84,6 +92,16 @@
     	width:100px;
     	margin-left:5px;
     	margin-right:5px;
+    	padding-top:5px;
+    	
+	}
+	
+	#container_centered #large_icon li {
+		display: inline-block;
+    	float: none;
+    	width:130px;
+    	margin-left:-5px;
+    	margin-right:-5px;
     	padding-top:5px;
     	
 	}
@@ -221,7 +239,7 @@
     	width:140px;
     	margin-left:5px;
     	margin-right:5px;
-    	
+    	text-align: center;
     	
 	}
 	
@@ -303,5 +321,46 @@
 		height: 500px;
 		overflow-y: scroll;
 	}
+	
+	
+	<?php
+	
+		echo '#'.$data_buy['name'].' {';
+		echo $data_buy['css'];
+		echo "}";
+			
+		echo '#'.$data_buy['name'].' h1 {';
+		echo $data_buy['cssh1'];
+		echo "}";
+			
+		echo '#'.$data_buy['name'].' h2 {';
+		echo $data_buy['cssh2'];
+		echo "}";
+			
+		echo '#'.$data_buy['name'].' h3 {';
+		echo $data_buy['cssh3'];
+		echo "}";
+			
+		echo '#'.$data_buy['name'].' h4 {';
+		echo $data_buy['cssh4'];
+		echo "}";
+		
+		echo '#'.$data_buy['name'].' a {';
+		echo $data_buy['cssa'];
+		echo "}";
+			
+		echo '#'.$data_buy['name'].' b {';
+		echo $data_buy['cssb'];
+		echo "}";
+			
+		echo "@media screen and (min-width: 1000px){";
+		echo '#'.$data_buy['name'].' a {';
+		echo $data_buy['cssa_large'];
+		echo "}";
+		echo "}";
+	 
+	 
+	?>
+	
 	
 </style>

@@ -6,12 +6,15 @@
 
 <style>
 
-table {border-spacing: 0; }
+table {border-spacing: 0; 
+	}
 
 table a:link {
+	display:inline-block;
 	color: #666;
-	font-weight: bold;
+	font-weight: 100;
 	text-decoration:none;
+	
 }
 table a:visited {
 	color: #999999;
@@ -23,6 +26,9 @@ table a:hover {
 	color: #bd5a35;
 	text-decoration:underline;
 }
+
+
+
 table {
 	
 	color:#666;
@@ -86,6 +92,7 @@ table tr td {
 	padding-left: 25px;
 	border-top: 1px solid #e0e0e0;
 	border-bottom:1px solid #e0e0e0;
+	
 	/*
 	border-left: 1px solid #e0e0e0;
 	*/

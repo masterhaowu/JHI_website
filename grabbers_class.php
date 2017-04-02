@@ -20,13 +20,15 @@
 		$query_overview = "SELECT * FROM banners WHERE page = 'grabbers_class' AND class = '$_GET[class]' AND type = 'overview'";
 		$result_overview = mysqli_query($dbc, $query_overview);
 		
+		$query_buy = "SELECT * FROM banners WHERE name = 'class_buy'";
+		$result_buy = mysqli_query($dbc, $query_buy);
 	
 		//features_data contains more than 1 therefore should be put to the while loop later
 		//$features_data = mysqli_fetch_assoc($result_features);
 		
 		$overview_data = mysqli_fetch_assoc($result_overview);
 		
-		
+		$buy_data = mysqli_fetch_assoc($result_buy);
 		
 		
 		?>
@@ -109,6 +111,12 @@
 				
 			<h3>Model Specs</h3>
 			<hr>
+			<div id="class_buy">
+				<?php 
+					echo $buy_data['html'];
+				?>
+			</div>
+			
 			
 			<?php $comparsion_table_type = "grabbers"; ?>
 			</br>
