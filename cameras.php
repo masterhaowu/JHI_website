@@ -64,5 +64,9 @@
 		
 		<?php include(D_TEMPLATE.'/footer.php'); ?>
 		<script src="js/secondary_nav.js"></script>
+		<script>
+			<?php $js_selection = 'cameras'; ?>
+			<?php include ('js/js_from_sql.php'); ?>
+		</script>
 	</body>
 </html>

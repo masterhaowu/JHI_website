@@ -45,7 +45,8 @@
 		//include ('css/css_grabbers.php');
 		include ('css/css_medical_class.php');
 		//include ('css/css_table.php');
-		//include ('css/css_table_list.php');
+		include ('css/css_table_list.php');
+		include ('css/css_special_models.php');
 		?>
 
 		<?php
@@ -130,6 +131,8 @@
 				<?php
 			}
 			?>
+			
+			<?php include(D_TEMPLATE.'/specific_models.php'); ?>
 		</div>
 		
 		<?php include(D_TEMPLATE.'/footer.php'); ?>

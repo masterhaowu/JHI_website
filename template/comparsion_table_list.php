@@ -13,8 +13,12 @@
 	if($is_search == false){
 		$query_products = "SELECT * FROM $comparsion_table_type WHERE class = '$_GET[class]' ORDER BY serial ASC";
 	}
-	else {
+	else if (!isset($special_search)) {
 		$query_products = "SELECT * FROM $search_type WHERE $_GET[tag] = 1 ORDER BY serial ASC";
+	}
+	else{
+		$query_products = "SELECT * FROM $search_type WHERE $special_search = 1 ORDER BY serial ASC";
+		//echo $query_products;
 	}
 	//echo $query_products;
 	$result_products = mysqli_query($dbc, $query_products);
@@ -22,6 +26,7 @@
 	$size_products = mysqli_num_rows($result_products);
 	//echo $size_products;
 	$is_even = 0;
+	
 ?>
 <?php
 	$specs_num = 0;

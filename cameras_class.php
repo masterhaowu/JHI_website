@@ -131,6 +131,8 @@
 		<script src="js/table.js"></script>
 		<script>
 		
+			<?php $js_selection = 'cameras_class'; ?>
+			<?php include ('js/js_from_sql.php'); ?>
 			//$('body').scrollspy({ target: '#class_nav' })
 			var offset = document.getElementsByTagName("body")[0].getAttribute("data-offset"); 
 			//document.write(offset)
