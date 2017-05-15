@@ -65,7 +65,7 @@
 			</br>
 			<div class = "row">
 			<div class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
-				<h3>Series Overview</h3>
+				<h3><?php echo $overview_data['overview_title']; ?></h3>
 				
 				<hr>
 			</div>
