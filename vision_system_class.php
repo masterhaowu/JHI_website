@@ -7,11 +7,13 @@
 		
 		
 		<?php
+		/*
 		$query = "SELECT * FROM vision_system_class WHERE class = '$_GET[class]'";
 		$result = mysqli_query($dbc, $query);
 		
 		$class_data = mysqli_fetch_assoc($result);
-		?>
+		
+		*/?>
 		
 
 		<?php
@@ -21,7 +23,7 @@
 		?>
 		
 
-		<title>Cameras<?php echo ' | '.$site_title; ?></title>
+		<title>Vision Systems<?php echo ' | '.$site_title; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 		<!--<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
@@ -49,12 +51,7 @@
 		
 		
 		<div id="features">
-			<div class = "row">
-			<div class = "col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
-				<h3>Features</h3>
-				<hr style="padding-bottom: 0px; margin-bottom: 0px">
-			</div>
-			</div>
+			
 			<?php
 			while ($features_data = mysqli_fetch_assoc($result_features)) {
 				?>
